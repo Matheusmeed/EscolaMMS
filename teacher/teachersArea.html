@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../styles/teachersArea.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor MMS</title>
+</head>
+<body>
+        <input id="sair" type="button" value="sair" onclick="sair()">
+        <h3 id="logo">MMS</h3>
+        <div id="conteudo">
+
+            <div class="listaNotas">
+
+                <div id="nomes">
+                    <h3>Aluno</h3>
+                </div>
+
+                <div id="ra">
+                    <h3>RA</h4>
+                </div>
+
+                <div id="p1" class="campo">
+                    <h3>P1</h4>
+                </div>
+
+                <div id="p2" class="campo">
+                    <h3>P2</h4>
+                </div>
+
+                <div id="media" class="campo">
+                    <h3>Média</h4>
+                </div>
+            </div>
+            
+        </div>
+        <input id="btnAlterar" type="button" value="Alterar nota" onclick="abrirMenu()">
+
+        <div id="alterar">
+            <div id="menuAlterar">
+                <h3>RA</h3>
+                <input type="number" name="ra" id="inputRA">
+                <h3>Nota P1</h3>
+                <input type="number" name="inputP1" id="inputP1">
+                <h3>Nota P2</h3>
+                <input type="number" name="" id="inputP2">
+                <input class="btnDoAlterar" id="alterarNotas" type="button" value="Alterar" onclick="alterarNotas()">
+                <input class="btnDoAlterar" id="btnSair" type="button" value="Sair" onclick="sairDoMenu()">
+            </div>
+        </div>
+        
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+<script src="../scripts/firebase.js"></script>
+</html>

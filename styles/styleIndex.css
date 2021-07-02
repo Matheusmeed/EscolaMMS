@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background-image: url(../images/student.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 100px;
+    color: #261ac2;
+    text-decoration: underline;
+    height: 120px;
+    padding: 15px;
+    
+}
+
+h1::first-letter {
+    color: pink;
+}
+
+h1::first-line {
+    color: white;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b0c52b7;
+}
+
+main input {
+    margin-top: 10px;
+    width: 350px;
+    height: 70px;
+    background-color: #251ac2;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+    border: none;
+}
+
+main input:hover {
+    cursor: pointer;
+    background-color: pink;
+    transition: 0.8s;
+}

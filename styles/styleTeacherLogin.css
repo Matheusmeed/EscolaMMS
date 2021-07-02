@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #E8EEF2;
+}
+
+.index {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+}
+
+main {
+    text-align: center;
+    width: 40%;
+    height: 100vh;
+    background-color: #E8EEF2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main input {
+    width: 60%;
+    height: 38px;
+    border-radius: 20px;
+    border-style: none;
+    margin-top: 20px;
+    border: 1px solid #083D77;
+    outline: 0;
+    padding-left: 10px;
+}
+
+main h1 {
+    margin-top: 130px;
+    font-size: 3.5em;
+    color: #083D77;
+    text-shadow: 1px 1px #083D77;
+}
+main h2 {
+    margin-top: 100px;
+    margin-bottom: 0;
+    font-size: 1.6em;
+    color: #FF006E;
+}
+
+main #access {
+    height: 60px;
+    max-width: 170px;
+    border-radius: 30px;
+    background-color: #FF006E;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+main #access:hover {
+    background-color: #6a9dd3;
+    transition: 0.6s;
+}
+
+main button {
+    margin-top: 20px;
+    border: none;
+    background: none;
+}
+
+main button:hover {
+    color: #FF006E;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.background {
+    border-left: 7px solid #FF006E;
+    background-color: #083D77;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background img {
+    width: 75%;
+    display: inline-block;
+    border-radius: 5px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+    .index {
+        flex-wrap: wrap;
+    }
+}
