@@ -148,14 +148,6 @@ function adicionarAluno() {
 
     if (txtNome == '' || txtSobrenome == '' || txtRA == '') {
         alert('Você deve preencher todos os campos!');
-    } else if (
-        turma.get().then((snapshot) => {
-            snapshot.forEach((doc) => {
-                doc.data().ra;
-            }) == txtRA;
-        })
-    ) {
-        alert('Esse aluno já existe');
     } else {
         let nomeFormatado =
             txtNome[0].toUpperCase() + txtNome.substr(1).toLowerCase();

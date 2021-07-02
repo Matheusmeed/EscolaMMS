@@ -102,6 +102,7 @@ input[type='number'] {
     width: auto;
     border-radius: 4px;
     border: none;
+    margin-bottom: 30px;
 }
 
 .btnBotoes {
@@ -124,7 +125,7 @@ input[type='number'] {
 .botoesMenu {
     width: 100%;
     height: 100%;
-    background-color: rgba(1, 7, 43, 0.418);
+    background-color: #01072b6b;
     position: absolute;
     top: 0;
     display: flex;
@@ -132,6 +133,7 @@ input[type='number'] {
     justify-content: center;
     align-items: center;
     display: none;
+    margin-bottom: 40px;
 }
 
 .menuAlterar {
