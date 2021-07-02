@@ -20,8 +20,6 @@ const P1 = document.getElementById('p1');
 const P2 = document.getElementById('p2');
 const MEDIA = document.getElementById('media');
 
-const menuAlterarNotas = document.getElementById('alterar');
-
 // Logar
 
 function checkEmail() {
@@ -74,16 +72,27 @@ turma.onSnapshot((snapshot) => {
     });
 });
 
-// Botão alterar nota chama essa função
+// Botões chama essa função para abrir o menu
+const menuAlterarNotas = document.getElementsByClassName('botoesMenu')[0];
+const menuAdd = document.getElementsByClassName('botoesMenu')[1];
+const menuRemover = document.getElementsByClassName('botoesMenu')[2];
 
-function abrirMenu() {
+function abrirMenuNota() {
     menuAlterarNotas.style.display = 'flex';
+}
+function abrirMenuAdd() {
+    menuAdd.style.display = 'flex';
+}
+function abrirMenuRemover() {
+    menuRemover.style.display = 'flex';
 }
 
 // Sair do menu de alteração de nota
 
 function sairDoMenu() {
     menuAlterarNotas.style.display = 'none';
+    menuAdd.style.display = 'none';
+    menuRemover.style.display = 'none';
 }
 
 // Alterar Notas
@@ -99,16 +108,14 @@ function alterarNotas() {
 
     if (inputRA == '') {
         alert('Você deve colocar um RA válido');
-    } else if(inputP1 < 0 || inputP1 > 10 || inputP2 < 0 || inputP2 > 10) {
-        alert('Você deve colocar uma nota que esteja entre 0 e 10!')
-        window.location.reload()
-    }
-    
-    else {
+        window.location.reload();
+    } else if (inputP1 < 0 || inputP1 > 10 || inputP2 < 0 || inputP2 > 10) {
+        alert('Você deve colocar uma nota que esteja entre 0 e 10!');
+        window.location.reload();
+    } else {
         turma.get().then((snapshot) => {
             snapshot.forEach((doc) => {
                 let ra = doc.data().ra;
-                console.log(ra);
 
                 if (inputRA == ra) {
                     let alunoref = db.collection('turma').doc(doc.id);
@@ -127,6 +134,74 @@ function alterarNotas() {
         });
         menuAlterarNotas.style.display = 'none';
         setInterval(() => {
+            window.location.reload();
+        }, 100);
+    }
+}
+
+// Adicionar aluno
+
+function adicionarAluno() {
+    let txtNome = document.getElementById('txtNome').value;
+    let txtSobrenome = document.getElementById('txtSobrenome').value;
+    let txtRA = document.getElementById('txtRA').value;
+
+    if (txtNome == '' || txtSobrenome == '' || txtRA == '') {
+        alert('Você deve preencher todos os campos!');
+    } else if (
+        turma.get().then((snapshot) => {
+            snapshot.forEach((doc) => {
+                doc.data().ra;
+            }) == txtRA;
+        })
+    ) {
+        alert('Esse aluno já existe');
+    } else {
+        let nomeFormatado =
+            txtNome[0].toUpperCase() + txtNome.substr(1).toLowerCase();
+        let sobrenomeFormatado =
+            txtSobrenome[0].toUpperCase() +
+            txtSobrenome.substr(1).toLowerCase();
+
+        db.collection('turma').doc().set({
+            nome: nomeFormatado,
+            sobrenome: sobrenomeFormatado,
+            p1: 0,
+            p2: 0,
+            ra: txtRA,
+        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 100);
+    }
+}
+
+// Remover Aluno
+
+function removerAluno() {
+    let removerRA = document.getElementById('removerRA');
+
+    if (removerRA.value == '') {
+        alert('Você deve colocar o RA do aluno na lacuna.');
+    } else {
+        turma.get().then((snapshot) => {
+            snapshot.forEach((doc) => {
+                let ra = doc.data().ra;
+
+                if (removerRA.value == ra) {
+                    let alunoref = db.collection('turma').doc(doc.id);
+
+                    return alunoref
+                        .delete()
+                        .then()
+                        .catch((error) => {
+                            console.error(error);
+                        });
+                }
+            });
+        });
+        menuAlterarNotas.style.display = 'none';
+        setTimeout(() => {
             window.location.reload();
         }, 100);
     }

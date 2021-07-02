@@ -36,10 +36,16 @@
             </div>
             
         </div>
-        <input id="btnAlterar" type="button" value="Alterar nota" onclick="abrirMenu()">
 
-        <div id="alterar">
-            <div id="menuAlterar">
+        <div class="botoes">
+            <input class="btnBotoes" id="btnAlterar" type="button" value="Alterar nota" onclick="abrirMenuNota()">
+            <input class="btnBotoes" type="button" value="Adicionar Aluno" onclick="abrirMenuAdd()">
+            <input class="btnBotoes" type="button" value="Remover Aluno"
+            onclick="abrirMenuRemover()">
+        </div>
+
+        <div class="botoesMenu">
+            <div class="menuAlterar">
                 <h3>RA</h3>
                 <input type="number" name="ra" id="inputRA">
                 <h3>Nota P1</h3>
@@ -50,9 +56,32 @@
                 <input class="btnDoAlterar" id="btnSair" type="button" value="Sair" onclick="sairDoMenu()">
             </div>
         </div>
+
+        <div class="botoesMenu">
+            <div class="menuAlterar">
+                <h3>Nome</h3>
+                <input type="text" name="" id="txtNome">
+                <h3>Sobrenome</h3>
+                <input type="text" name="" id="txtSobrenome">
+                <h3>RA</h3>
+                <input type="number" name="ra" id="txtRA">
+                <input class="btnDoAlterar" id="alterarNotas" type="button" value="Adicionar Aluno" onclick="adicionarAluno()">
+                <input class="btnDoAlterar" id="btnSair" type="button" value="Sair" onclick="sairDoMenu()">
+            </div>
+            
+        </div>
+
+        <div class="botoesMenu">
+            <div class="menuAlterar">
+                <h3>RA</h3>
+                <input type="number" name="ra" id="removerRA">
+                <input class="btnDoAlterar" id="alterarNotas" type="button" value="Remover Aluno" onclick="removerAluno()">
+                <input class="btnDoAlterar" id="btnSair" type="button" value="Sair" onclick="sairDoMenu()">
+            </div>            
+        </div>  
         
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
-<script src="../scripts/firebase.js"></script>
+<script src="../scripts/professor.js"></script>
 </html>

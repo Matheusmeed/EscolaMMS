@@ -6,14 +6,12 @@ body {
     margin: 0;
 }
 
-input[type=number]::-webkit-inner-spin-button { 
+input[type='number']::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    
 }
-input[type=number] { 
-   -moz-appearance: textfield;
-   appearance: textfield;
-
+input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 #sair {
@@ -27,7 +25,7 @@ input[type=number] {
 #sair:hover {
     color: #261ac2;
     cursor: pointer;
-} 
+}
 
 #logo {
     position: absolute;
@@ -41,7 +39,6 @@ input[type=number] {
     text-decoration: underline;
     height: 120px;
     padding: 15px;
-    
 }
 
 #logo::first-letter {
@@ -60,18 +57,18 @@ input[type=number] {
     justify-content: center;
 }
 
-
 .listaNotas {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    background:pink;
+    background: pink;
     margin-top: 100px;
     width: 700px;
     height: auto;
     padding: 20px;
     border-radius: 3px;
+    padding-bottom: 0;
 }
 
 .listaNotas div {
@@ -84,58 +81,67 @@ input[type=number] {
     width: 150px;
 }
 
-
-
 .campo {
     display: flex;
     flex-flow: column nowrap;
     margin-left: 20px;
     margin-right: 20px;
-
 }
 
 #ra {
     margin-right: 50px;
 }
 
-#btnAlterar {
-    font-size: 1.3em;
+.botoes {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 50px;
-    background-color: rgb(0, 195, 255);
-    height: 50px;
-    width: 130px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
     border-radius: 4px;
     border: none;
 }
 
-#btnAlterar:hover {
+.btnBotoes {
+    font-size: 1.3em;
+    background-color: rgb(0, 195, 255);
+    height: 50px;
+    width: 180px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+.btnBotoes:hover {
     cursor: pointer;
     color: white;
     transition: 0.6s;
 }
 
-#alterar {
+.botoesMenu {
     width: 100%;
     height: 100%;
     background-color: rgba(1, 7, 43, 0.418);
     position: absolute;
     top: 0;
-    display: flex;    
+    display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     display: none;
 }
 
-#menuAlterar {
-    background-color: #E8EEF2;
+.menuAlterar {
+    background-color: #e8eef2;
     width: 300px;
-    height: 390px;
+    height: auto;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .btnDoAlterar {
