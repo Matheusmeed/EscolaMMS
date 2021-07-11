@@ -77,7 +77,7 @@ function acessarNotas() {
     if (inputRA == '' || inputSenha == '') {
         alert('Você deve preencher todos os campos!');
     } else {
-        abrirMenu()
+        abrirMenu();
         turma.get().then((snapshot) => {
             snapshot.forEach((doc) => {
                 let ra = doc.data().ra;
@@ -99,5 +99,5 @@ function acessarNotas() {
 
 function sairDoMenu() {
     menuNotas.style.display = 'none';
-    window.location.reload()
+    window.location.reload();
 }

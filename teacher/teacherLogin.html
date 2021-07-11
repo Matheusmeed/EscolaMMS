@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="../styles/styleTeacherLogin.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+        <title>Escola MMS</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../styles/styleTeacherLogin.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escola MMS</title>
-</head>
+    <body>
+        <div class="index">
+            <main>
+                <h1>Olá, professor!</h1>
 
-<body>
-    <div class="index">
-        <main>
-            <h1>Olá, professor!</h1>
-
-            <h2>Faça o seu login</h2>
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="" id="senha" placeholder="Senha">
-            <input id="access" type="button" value="ACESSAR" onclick="checkEmail()">
-            <button>Esqueci a minha senha</button>
-        </main>
-        <div class="background">
-            <img src="../images/teacher.jpg" alt="">
+                <h2>Faça o seu login</h2>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                />
+                <input type="password" name="" id="senha" placeholder="Senha" />
+                <input
+                    id="access"
+                    type="button"
+                    value="ACESSAR"
+                    onclick="checkEmail()"
+                />
+                <button>Esqueci a minha senha</button>
+            </main>
+            <div class="background">
+                <img src="../images/teacher.jpg" alt="" />
+            </div>
         </div>
-    </div>
 
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
 
-  <script src="../scripts/professor.js"></script>
-</body>
-
+        <script src="../scripts/professor.js"></script>
+    </body>
 </html>
