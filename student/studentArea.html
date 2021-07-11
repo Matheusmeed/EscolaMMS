@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="../styles/styleStudentArea.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aluno MMS</title>
+    </head>
+    <body>
+        <input id="sair" type="button" value="sair" onclick="sair()">
+        <main>
+            <h1>Área do Aluno</h1>
+            <h2>RA</h2>
+            <input type="number" name="" id="inputRA" />
+            <input type="button" value="ACESSAR NOTAS" id="access" onclick="abrirMenu()"/>
+        </main>
+
+        <div class="menuNotas">
+            <div class="verNotas">
+                <h2>P1</h3>
+                <h3 id="p1">6.6</h3>
+                <h2>P2</h3>
+                <h3 id="p2">5,8</h3>
+                <h2>Média</h3>
+                <h3 id="media">435</h3>
+                <input
+                    class="btnDoAlterar"
+                    id="btnSair"
+                    type="button"
+                    value="SAIR"
+                    onclick="sairDoMenu()"
+                />
+            </div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+    <script src="../scripts/aluno.js"></script>
+    </body>
+</html>

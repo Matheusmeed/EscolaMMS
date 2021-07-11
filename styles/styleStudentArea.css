@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background-image: url(../images/student.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 100px;
+    color: #261ac2;
+    text-decoration: underline;
+    height: 120px;
+    padding: 15px;
+}
+
+h1::first-letter {
+    color: pink;
+}
+
+h1::first-line {
+    color: white;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 0;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b0c52b7;
+}
+
+main input {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+    height: 38px;
+    border-radius: 20px;
+    border-style: none;
+    margin-top: 10px;
+    border: 1px solid #083d77;
+    outline: 0;
+    padding-left: 10px;
+}
+
+main #access {
+    margin-top: 30px;
+    height: 60px;
+    max-width: 230px;
+    border-radius: 30px;
+    background-color: #ff006e;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+main #access:hover {
+    background-color: #6a9dd3;
+    transition: 0.6s;
+}
+
+.menuNotas {
+    width: 100%;
+    height: 100%;
+    background-color: #000000d2;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-bottom: 40px;
+}
+
+.verNotas {
+    background-color: #083d77;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.verNotas h2 {
+    color: white;
+}
+
+.verNotas h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    color: pink;
+}
+
+#btnSair {
+    color: white;
+    font-weight: bold;
+    border-style: none;
+    background-color: red;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 51px;
+    height: 30px;
+}
+
+#btnSair:hover {
+    background-color: rgb(255, 91, 118);
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+#sair {
+    background: none;
+    border: none;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 24px;
+    color: #ff006e;
+    position: absolute;
+}
+
+#sair:hover {
+    color: #6a9dd3;
+    cursor: pointer;
+}

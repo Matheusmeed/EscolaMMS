@@ -27,6 +27,9 @@ function checkEmail() {
     let senha = document.getElementById('senha').value;
     if (email == '' || senha == '') {
         alert('Preencha todas as lacunas!');
+    } else if (!email.includes('professor')) {
+        alert('Conta inválida!');
+        window.location.reload();
     } else {
         firebase
             .auth()
