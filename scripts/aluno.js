@@ -61,7 +61,6 @@ const menuNotas = document.getElementsByClassName('menuNotas')[0];
 
 function abrirMenu() {
     menuNotas.style.display = 'flex';
-    acessarNotas();
 }
 
 // Acessa as notas do firebase
@@ -69,15 +68,36 @@ function abrirMenu() {
 let inputRA = document.getElementById('inputRA');
 let inputSenha = document.getElementById('inputSenha');
 
+let p1 = document.getElementById('p1');
+let p2 = document.getElementById('p2');
+let media = document.getElementById('media');
+
 function acessarNotas() {
     inputRA = inputRA.value;
     if (inputRA == '' || inputSenha == '') {
         alert('Você deve preencher todos os campos!');
-    } 
+    } else {
+        abrirMenu()
+        turma.get().then((snapshot) => {
+            snapshot.forEach((doc) => {
+                let ra = doc.data().ra;
+
+                if (inputRA == ra) {
+                    let p1db = doc.data().p1;
+                    let p2db = doc.data().p2;
+
+                    p1.innerHTML = p1db;
+                    p2.innerHTML = p2db;
+                    media.innerHTML = (p1db + p2db) / 2;
+                }
+            });
+        });
+    }
 }
 
 //Fechar menu de notas
 
 function sairDoMenu() {
     menuNotas.style.display = 'none';
+    window.location.reload()
 }
