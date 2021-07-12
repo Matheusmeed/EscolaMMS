@@ -76,6 +76,7 @@ function acessarNotas() {
     inputRA = inputRA.value;
     if (inputRA == '' || inputSenha == '') {
         alert('Você deve preencher todos os campos!');
+        window.location.reload();
     } else {
         abrirMenu();
         turma.get().then((snapshot) => {
