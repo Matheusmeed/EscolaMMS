@@ -167,7 +167,7 @@ function adicionarAluno() {
         });
         setTimeout(() => {
             window.location.reload();
-        }, 100);
+        }, 300);
     }
 }
 
