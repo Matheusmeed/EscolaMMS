@@ -9,17 +9,6 @@
 <h3>Área do Aluno</h3>
 <img src='./images/alunoMMS.gif'></img>
 
-## :computer: Teste o Site
-<h3>Professor</h3>
-<p>Email: reginaldo@professor.com</p>
-<p>Senha: 123456</p>
-
-<h3>Aluno</h3>
-<p>Email: matheus@aluno.com</p> 
-<p>Senha: 123456</p>
-<p>RA: 1234</p>
-
-<a href="https://escolamms.netlify.app/" target="_blank">Clique aqui para testar o site</a>
 
 ## :rocket: Tecnologias
 
